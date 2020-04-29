@@ -7,22 +7,22 @@ router.get("/", (req, res) => {
 });
 
 router.get("/getData", (req, res) => {
-  return res.json({
-    status: "data",
-    msg: "保存成功1",
+  // return res.json({
+  //   status: "data",
+  //   msg: "保存成功1",
+  // });
+  operateDB.insert((err, data) => {
+    if (err) {
+      return res.json({
+        status: "发送错误",
+        msg: "连接错误",
+      });
+    }
+    return res.json({
+      status: "data success",
+      msg: "保存成功",
+    });
   });
-  //   operateDB.insert((err, data)=>{
-  //      if (err) {
-  //        return res.json({
-  //          status: "发送错误",
-  //          msg: "连接错误",
-  //        });
-  //      }
-  //      res.json({
-  //        status: "data",
-  //        msg: "保存成功",
-  //      });
-  //   });
 });
 
 module.exports = router;
