@@ -1,29 +1,62 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
 
-Vue.use(VueRouter)
+//
+import Detail from "../views/detail";
 
-  const routes = [
+//JsUI
+import Index from "../views/JsUI/index";
+import ButtonDemo from "../views/JsUI/packages/ButtonDemo";
+import RadioDemo from "../views/JsUI/packages/RadioDemo";
+
+//Mongoose
+import MonDemo1 from "../views/Mongo/MonDemo1";
+Vue.use(VueRouter);
+
+const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+    path: "/Detail",
+    name: "Detail",
+    component: Detail,
+  },
+  {
+    path: "/Index",
+    name: "Index",
+    component: Index,
+  },
+  //JsUI
+  {
+    path: "/ButtonDemo",
+    name: "ButtonDemo",
+    component: ButtonDemo,
+  },
+  {
+    path: "/RadioDemo",
+    name: "RadioDemo",
+    component: RadioDemo,
+  },
+  //Mongoose
+  {
+    path: "/MonDemo1",
+    name: "MonDemo1",
+    component: MonDemo1,
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
+
+router.beforeEach((to, from, next) => {
+  next();
+});

@@ -1,0 +1,17 @@
+#Detail {
+  min-height: 100vh;
+  min-width: 600px;
+  background-color: #f1f2f6;
+
+  // padding: 100px 200px;
+  .mine {
+    font-family: "Courier New", Courier, monospace;
+    p {
+      display: inline-block;
+      padding: 0 10px;
+      &:hover {
+        background-color: pink;
+      }
+    }
+  }
+}

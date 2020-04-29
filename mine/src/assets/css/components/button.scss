@@ -1,0 +1,104 @@
+// #JsButton {
+button {
+  margin: 15px;
+}
+//默认按钮
+.default {
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 2px;
+  background-color: #fff;
+  padding: 0 15px;
+  height: 35px;
+}
+
+.primary {
+  color: #fff;
+  border-radius: 3.5px;
+  border: 1px soli;
+  border-color: rgba($color: #f7b731, $alpha: 0.5);
+  background-color: #f7b731;
+}
+
+.calm {
+  color: #fff;
+  border-radius: 3.5px;
+  border: 1px soli;
+  border-color: rgba($color: #409eff, $alpha: 0.5);
+  background-color: #409eff;
+}
+
+.danger {
+  color: #fff;
+  border-radius: 3.5px;
+  border: 1px solid;
+  border-color: rgba($color: #e74c3c, $alpha: 0.5);
+  background-color: #ee5253;
+}
+
+.success {
+  color: #fff;
+  border-radius: 3.5px;
+  border: 1px solid;
+  border-color: rgba($color: #2ed573, $alpha: 0.5);
+  background-color: #2ecc71;
+}
+
+.primary:hover,
+.calm:hover,
+.danger:hover,
+.success:hover {
+  filter: opacity(60%);
+}
+
+//圆形
+.circle {
+  border-radius: 50%;
+}
+
+//禁用
+.disabled {
+  filter: opacity(45%);
+
+  &:hover {
+    filter: opacity(45%);
+    cursor: not-allowed;
+  }
+}
+
+//大小
+.normol {
+  padding: 0 15px;
+  height: 35px;
+}
+
+.small {
+  padding: 0 12px;
+  height: 30px;
+}
+
+.mini {
+  padding: 0 10px;
+  height: 25px;
+}
+
+//朴素按钮  暂时只会这样处理
+.plainsuccess {
+  color: #2ecc71;
+  background-color: rgba($color: #7bed9f, $alpha: 0.1);
+}
+
+.plaincalm {
+  color: #409eff;
+  background-color: rgba($color: #409eff, $alpha: 0.1);
+}
+.plaindanger {
+  color: #ff4757;
+  background-color: rgba($color: #ff4757, $alpha: 0.1);
+}
+
+.plainprimary {
+  color: #fa8231;
+  background-color: rgba($color: #f7b731, $alpha: 0.1);
+}
+// }

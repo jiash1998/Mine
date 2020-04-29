@@ -1,0 +1,29 @@
+.js-radio {
+  position: relative;
+  //   background-color: gray;
+  font-size: 0.9em;
+  &:hover,
+  .js-radio_input:hover {
+    color: #409eff;
+  }
+
+  input[type="radio"] {
+    display: none;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .js-radio_input::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid gainsboro;
+    margin: 0px 5px 0;
+    border-radius: 50%;
+  }
+
+  &:checked + .js-radio_input::before {
+    background-color: pink;
+  }
+}

@@ -1,0 +1,12 @@
+#Index {
+    min-height: 100vh;
+    background-color: #f1f2f6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    button {
+        height: 35px;
+        padding: 5px 20px;
+    }
+}
